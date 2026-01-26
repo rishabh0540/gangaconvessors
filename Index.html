@@ -73,15 +73,19 @@
         }
         .btn-standard:active { transform: scale(0.98); }
         
-        /* Updated Partner Logo Styles: Full Color by Default */
         .partner-logo-container {
             transition: all 0.3s ease;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .partner-logo {
             filter: none;
             opacity: 1;
             transition: transform 0.3s ease;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -91,12 +95,12 @@
     <nav id="navbar" class="fixed top-0 w-full z-[100] transition-all duration-500 py-4 md:py-6">
         <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#022c22] rounded shadow-md border border-amber-500/30 overflow-hidden" style="border-radius: 1 rem;">
-                    <img src="gc.png"></img>
-                    <!-- <span class="text-amber-500 font-bold text-xs">GC</span> -->
+                <!-- Circular Logo Container -->
+                <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#022c22] rounded-full border border-amber-500/30 overflow-hidden shadow-md">
+                    <img src="gc.png" alt="GC" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-[11px] md:text-[13px] font-bold tracking-[0.05em] text-slate-900 leading-none">GANGA CONVESSORS</span>
+                    <span class="text-[11px] md:text-[13px] font-bold tracking-[0.05em] text-slate-900 leading-none uppercase">Ganga Convessors</span>
                     <span class="text-[9px] uppercase tracking-widest text-emerald-600 font-bold mt-1">A RK Group Enterprise</span>
                 </div>
             </div>
@@ -200,57 +204,58 @@
         </div>
     </section>
 
-    <!-- PARTNERS LOGO WALL (Colored by Default + Floating Animation) -->
+    <!-- PARTNERS LOGO WALL (2 Columns Mobile, Row Laptop) -->
     <section id="partners" class="py-12 md:py-24 border-b border-slate-50 bg-white">
         <div class="max-w-[1200px] mx-auto px-6">
             <p class="text-center text-[9px] uppercase tracking-[0.5em] font-black text-slate-300 mb-8 md:mb-16 italic">Institutional Counterparties</p>
-            <div class="grid grid-cols-2 sm:grid-cols-4 md:flex md:flex-wrap justify-center items-center gap-6 md:gap-16">
+            <!-- Strict Grid 2 Cols Mobile, Flex Laptop -->
+            <div class="grid grid-cols-2 md:flex md:flex-wrap lg:flex-nowrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
                 <!-- Suguna -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.sugunafoods.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://pbs.twimg.com/profile_images/1471449032740331521/9I4nk3Ag_400x400.jpg" alt="Suguna Foods" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://pbs.twimg.com/profile_images/1471449032740331521/9I4nk3Ag_400x400.jpg" alt="Suguna Foods" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Suguna</span>
                     </a>
                 </div>
                 <!-- Sampoorna -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://sampoornafeeds.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrcQ8YNx9GTOEDse_pgfMMmapaialAk0MIA&s" alt="Sampoorna" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrcQ8YNx9GTOEDse_pgfMMmapaialAk0MIA&s" alt="Sampoorna" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Sampoorna</span>
                     </a>
                 </div>
                 <!-- NBHC -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.nbhcindia.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://images.seeklogo.com/logo-png/38/1/national-bulk-handling-corporation-logo-png_seeklogo-386223.png" alt="NBHC" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://images.seeklogo.com/logo-png/38/1/national-bulk-handling-corporation-logo-png_seeklogo-386223.png" alt="NBHC" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">NBHC</span>
                     </a>
                 </div>
                 <!-- Cargill -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.cargill.co.in/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIv6wB1wtzZV3ELOwE-1Qnrr-P7SKZVmiFkg&s" alt="Cargill" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIv6wB1wtzZV3ELOwE-1Qnrr-P7SKZVmiFkg&s" alt="Cargill" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Cargill</span>
                     </a>
                 </div>
                 <!-- Star Agri -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.staragri.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0MXbmHqyfxfVoSCcK2ucN7WloIrvKHtsOA&s" alt="Star Agri" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0MXbmHqyfxfVoSCcK2ucN7WloIrvKHtsOA&s" alt="Star Agri" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Star Agri</span>
                     </a>
                 </div>
                 <!-- Dehaat -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.agrevolution.in/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://mma.prnewswire.com/media/1754558/DeHaat_Logo.jpg?p=twitter" alt="Dehaat" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://mma.prnewswire.com/media/1754558/DeHaat_Logo.jpg?p=twitter" alt="Dehaat" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Dehaat</span>
                     </a>
                 </div>
                 <!-- Godrej -->
-                <div class="partner-logo-container flex flex-col items-center gap-2 group" onclick="triggerFloat(this)">
+                <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.godrejagrovet.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/62812_profilepicture.png" alt="Godrej" class="rounded-full partner-logo shadow-sm" style="width: 6 rem;">
+                        <img src="https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/62812_profilepicture.png" alt="Godrej" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Godrej</span>
                     </a>
                 </div>
@@ -258,7 +263,7 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO (Colored + Floating) -->
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="py-16 md:py-32 bg-white overflow-hidden">
         <div class="max-w-[1200px] mx-auto px-6 mb-8 md:mb-20 reveal">
             <div class="flex items-center gap-3 mb-3">
@@ -391,10 +396,11 @@
     <footer class="py-12 md:py-24 bg-white border-t border-slate-50">
         <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <div class="flex items-center gap-4 opacity-40">
-                <div class="w-10 h-10 flex items-center justify-center bg-black text-white font-bold text-[10px] rounded shadow-sm" style="border-radius: 1 rem;">
-                    <img src="gc.png"></img>
+                <!-- Circular Logo Container -->
+                <div class="w-10 h-10 flex items-center justify-center bg-black rounded-full overflow-hidden shadow-sm">
+                    <img src="gc.png" alt="GC" class="w-full h-full object-cover">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col text-left">
                     <span class="text-[10px] font-black tracking-[0.2em] text-slate-900 uppercase leading-none">GANGA CONVESSORS</span>
                     <span class="text-[8px] font-bold text-slate-400 uppercase tracking-widest mt-1">Institutional Brokerage Since 1990</span>
                 </div>
@@ -408,8 +414,8 @@
 
     <!-- MOBILE CTA -->
     <div class="md:hidden fixed bottom-6 left-6 right-6 z-[300] flex gap-3">
-        <a href="tel:+919434069447" class="flex-1 bg-white border-2 border-[#022c22] text-[#022c22] h-[52px] rounded-full flex items-center justify-center gap-2 font-bold text-[10px] uppercase tracking-[0.1em] shadow-2xl">Call</a>
-        <a href="https://wa.me/919434069447" class="flex-1 bg-[#022c22] text-white h-[52px] rounded-full flex items-center justify-center gap-2 font-bold text-[10px] uppercase tracking-[0.1em] shadow-2xl">WhatsApp</a>
+        <a href="tel:+919434069447" class="flex-1 bg-white border-2 border-[#022c22] text-[#022c22] h-[52px] rounded-full flex items-center justify-center gap-2 font-black text-[10px] uppercase tracking-[0.1em] shadow-2xl">Call</a>
+        <a href="https://wa.me/919434069447" class="flex-1 bg-[#022c22] text-white h-[52px] rounded-full flex items-center justify-center gap-2 font-black text-[10px] uppercase tracking-[0.1em] shadow-2xl">WhatsApp</a>
     </div>
 
     <script>
