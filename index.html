@@ -30,7 +30,6 @@
             transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
             will-change: transform, opacity;
         }
-        /* Variations */
         .reveal-up { transform: translateY(40px); }
         .reveal-left { transform: translateX(-40px); }
         .reveal-right { transform: translateX(40px); }
@@ -41,7 +40,6 @@
             transform: translate(0, 0) scale(1);
         }
 
-        /* Success UI */
         #success-modal {
             display: none;
         }
@@ -81,12 +79,15 @@
         .btn-standard:active { transform: scale(0.98); }
         
         .partner-logo-container {
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+        .partner-logo-container:hover {
+            transform: scale(1.15);
         }
         .partner-logo {
             filter: none;
@@ -103,11 +104,10 @@
 
     <!-- NAVIGATION -->
     <nav id="navbar" class="fixed top-0 w-full z-[100] transition-all duration-500 py-4 md:py-6">
-        <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 flex justify-between items-center">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <!-- Circular Logo Container -->
                 <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#022c22] rounded-full border border-amber-500/30 overflow-hidden shadow-md">
-                    <img src="GC.png" alt="GC" class="w-full h-full object-cover">
+                    <img src="gc.png" alt="GC" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col">
                     <span class="text-[11px] md:text-[13px] font-bold tracking-[0.05em] text-slate-900 leading-none uppercase">Ganga Convessors</span>
@@ -141,19 +141,19 @@
     </div>
 
     <!-- HERO -->
-    <header class="pt-28 pb-12 md:pt-56 md:pb-32 bg-white relative overflow-hidden">
+    <header class="pt-28 pb-12 lg:pt-32 lg:pb-16 lg:min-h-[85vh] flex items-center bg-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/3 h-full bg-emerald-50/30 -skew-x-12 translate-x-1/2 -z-10"></div>
-        <div class="max-w-[1200px] mx-auto px-6">
-            <div class="max-w-4xl space-y-6 md:space-y-12">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 w-full">
+            <div class="max-w-4xl space-y-6 md:space-y-8">
                 <div class="flex items-center gap-4 reveal reveal-left">
                     <div class="h-px w-8 md:w-12 bg-emerald-800"></div>
                     <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-emerald-800">Legacy Trading House</span>
                 </div>
-                <h1 class="text-4xl md:text-[5.5rem] font-light tracking-tight leading-[1.1] md:leading-[1.05] text-slate-900 reveal reveal-up" style="transition-delay: 100ms;">
+                <h1 class="text-4xl lg:text-[3.5rem] font-light tracking-tight leading-[1.1] text-slate-900 reveal reveal-up" style="transition-delay: 100ms;">
                     Institutional <br />
-                    <span class="italic text-emerald-900 font-semibold underline decoration-amber-500/30 decoration-4">Brokerage Group.</span>
+                    <span class="italic text-emerald-900 font-semibold underline decoration-amber-500/30 lg:decoration-8 decoration-4">Brokerage Group.</span>
                 </h1>
-                <p class="text-sm md:text-xl text-slate-500 font-light leading-relaxed max-w-lg reveal reveal-up" style="transition-delay: 200ms;">
+                <p class="text-sm md:text-lg text-slate-500 font-light leading-relaxed max-w-lg reveal reveal-up" style="transition-delay: 200ms;">
                     Spearheaded by <span class="text-emerald-950 font-semibold">Ravi Kumar Gupta (Pankaj)</span>. Orchestrating the trade of 75,000+ Metric Tons monthly with surgical precision.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-2 md:pt-4 reveal reveal-up" style="transition-delay: 300ms;">
@@ -169,42 +169,42 @@
     </header>
 
     <!-- STATS -->
-    <section id="stats" class="py-16 md:py-36 bg-[#022c22] bg-pattern text-white relative">
-        <div class="max-w-[1200px] mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12 md:mb-28 reveal reveal-left">
-                <div class="space-y-4 md:space-y-6">
-                    <h2 class="text-3xl md:text-6xl font-light tracking-tight">We deliver results. <br /><span class="text-amber-500 font-semibold">Not promises.</span></h2>
-                    <p class="text-emerald-100/60 font-light text-sm md:text-lg max-w-xl italic">Bridging the gap between India's finest millers and global demand for over three decades.</p>
+    <section id="stats" class="py-16 lg:py-16 bg-[#022c22] bg-pattern text-white relative lg:min-h-screen flex items-center">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 relative z-10 w-full">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12 lg:mb-16 reveal reveal-left">
+                <div class="space-y-4 md:space-y-4">
+                    <h2 class="text-3xl lg:text-[3.2rem] font-light tracking-tight leading-tight">We deliver results. <br /><span class="text-amber-500 font-semibold">Not promises.</span></h2>
+                    <p class="text-emerald-100/60 font-light text-sm lg:text-base max-w-xl italic">Bridging the gap between India's finest millers and global demand for over three decades.</p>
                 </div>
                 <a href="#contact" class="btn-standard bg-amber-500 text-emerald-950 shadow-xl shadow-amber-500/20 reveal reveal-right">
                     Start Trading <i data-lucide="arrow-right" class="inline w-3 h-3 ml-2"></i>
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                 <div class="space-y-2 border-l border-emerald-800 pl-6 group reveal reveal-up" style="transition-delay: 0ms;">
-                    <div class="text-4xl md:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">30yr+</div>
+                    <div class="text-4xl lg:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">30yr+</div>
                     <div class="space-y-1">
                         <div class="text-[10px] font-bold uppercase tracking-widest text-white">Market Tenure</div>
                         <p class="text-[10px] text-emerald-100/40 font-light leading-relaxed">Operating since 1990 in the East Indian grain corridor.</p>
                     </div>
                 </div>
                 <div class="space-y-2 border-l border-emerald-800 pl-6 group reveal reveal-up" style="transition-delay: 100ms;">
-                    <div class="text-4xl md:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">75,000</div>
+                    <div class="text-4xl lg:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">75,000</div>
                     <div class="space-y-1">
                         <div class="text-[10px] font-bold uppercase tracking-widest text-white">MT Monthly Volume</div>
                         <p class="text-[10px] text-emerald-100/40 font-light leading-relaxed">Consistent movement of premium broken rice & maize.</p>
                     </div>
                 </div>
                 <div class="space-y-2 border-l border-emerald-800 pl-6 group reveal reveal-up" style="transition-delay: 200ms;">
-                    <div class="text-4xl md:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">500+</div>
+                    <div class="text-4xl lg:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">500+</div>
                     <div class="space-y-1">
                         <div class="text-[10px] font-bold uppercase tracking-widest text-white">Verified Millers</div>
                         <p class="text-[10px] text-emerald-100/40 font-light leading-relaxed">A vetted network of India's most reliable suppliers.</p>
                     </div>
                 </div>
                 <div class="space-y-2 border-l border-emerald-800 pl-6 group reveal reveal-up" style="transition-delay: 300ms;">
-                    <div class="text-4xl md:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">50+</div>
+                    <div class="text-4xl lg:text-5xl font-light text-amber-500 tracking-tighter transition-transform group-hover:translate-x-1">50+</div>
                     <div class="space-y-1">
                         <div class="text-[10px] font-bold uppercase tracking-widest text-white">National Agents</div>
                         <p class="text-[10px] text-emerald-100/40 font-light leading-relaxed">On-ground intelligence at every key logistical node.</p>
@@ -214,64 +214,56 @@
         </div>
     </section>
 
-    <!-- PARTNERS LOGO WALL (2 Columns Mobile, Row Laptop) -->
-    <section id="partners" class="py-12 md:py-24 border-b border-slate-50 bg-white">
-        <div class="max-w-[1200px] mx-auto px-6 reveal reveal-zoom">
-            <p class="text-center text-[9px] uppercase tracking-[0.5em] font-black text-slate-300 mb-8 md:mb-16 italic">Institutional Counterparties</p>
-            <div class="grid grid-cols-2 md:flex md:flex-wrap lg:flex-nowrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-                <!-- Suguna -->
+    <!-- PARTNERS LOGO WALL -->
+    <section id="partners" class="py-12 lg:py-24 border-b border-slate-50 bg-white">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 reveal reveal-zoom">
+            <p class="text-center text-[9px] uppercase tracking-[0.5em] font-black text-slate-300 mb-8 lg:mb-16 italic">Institutional Counterparties</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 justify-center items-center gap-8 lg:gap-10">
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.sugunafoods.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://pbs.twimg.com/profile_images/1471449032740331521/9I4nk3Ag_400x400.jpg" alt="Suguna Foods" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://pbs.twimg.com/profile_images/1471449032740331521/9I4nk3Ag_400x400.jpg" alt="Suguna Foods" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Suguna</span>
                     </a>
                 </div>
-                <!-- Sampoorna -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://sampoornafeeds.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrcQ8YNx9GTOEDse_pgfMMmapaialAk0MIA&s" alt="Sampoorna" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrcQ8YNx9GTOEDse_pgfMMmapaialAk0MIA&s" alt="Sampoorna" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Sampoorna</span>
                     </a>
                 </div>
-                <!-- NBHC -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.nbhcindia.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://images.seeklogo.com/logo-png/38/1/national-bulk-handling-corporation-logo-png_seeklogo-386223.png" alt="NBHC" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://images.seeklogo.com/logo-png/38/1/national-bulk-handling-corporation-logo-png_seeklogo-386223.png" alt="NBHC" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">NBHC</span>
                     </a>
                 </div>
-                <!-- Cargill -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.cargill.co.in/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://images.seeklogo.com/logo-png/2/1/cargill-logo-png_seeklogo-26246.png" alt="Cargill" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://images.seeklogo.com/logo-png/2/1/cargill-logo-png_seeklogo-26246.png" alt="Cargill" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Cargill</span>
                     </a>
                 </div>
-                <!-- Olam -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.olamgroup.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://i.pinimg.com/736x/e6/37/ed/e637edbf28fd0ff6d5cdff4751a7d7dd.jpg" alt="Olam Group" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://i.pinimg.com/736x/e6/37/ed/e637edbf28fd0ff6d5cdff4751a7d7dd.jpg" alt="Olam Group" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Olam</span>
                     </a>
                 </div>
-                <!-- Star Agri -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.staragri.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0MXbmHqyfxfVoSCcK2ucN7WloIrvKHtsOA&s" alt="Star Agri" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0MXbmHqyfxfVoSCcK2ucN7WloIrvKHtsOA&s" alt="Star Agri" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Star Agri</span>
                     </a>
                 </div>
-                <!-- Dehaat -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.agrevolution.in/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://mma.prnewswire.com/media/1754558/DeHaat_Logo.jpg?p=twitter" alt="Dehaat" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://mma.prnewswire.com/media/1754558/DeHaat_Logo.jpg?p=twitter" alt="Dehaat" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Dehaat</span>
                     </a>
                 </div>
-                <!-- Godrej -->
                 <div class="partner-logo-container group" onclick="triggerFloat(this)">
                     <a href="https://www.godrejagrovet.com/" target="_blank" class="flex flex-col items-center gap-2">
-                        <img src="https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/62812_profilepicture.png" alt="Godrej" class="h-14 w-14 md:h-16 md:w-16 rounded-full partner-logo shadow-sm">
+                        <img src="https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/62812_profilepicture.png" alt="Godrej" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full partner-logo shadow-sm">
                         <span class="text-[9px] font-bold text-slate-400 group-hover:text-emerald-900 transition-colors uppercase tracking-widest">Godrej</span>
                     </a>
                 </div>
@@ -280,97 +272,97 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" class="py-16 md:py-32 bg-white overflow-hidden">
-        <div class="max-w-[1200px] mx-auto px-6 mb-8 md:mb-20 reveal reveal-left">
+    <section id="portfolio" class="py-16 lg:py-24 bg-white overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 mb-8 lg:mb-12 reveal reveal-left">
             <div class="flex items-center gap-3 mb-3">
                 <i data-lucide="zap" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
                 <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-slate-400">Inventory Command</span>
             </div>
-            <p class="text-3xl md:text-5xl font-light text-slate-900 tracking-tighter leading-none italic">Product <span class="font-bold not-italic">Lookbook.</span></p>
+            <p class="text-3xl lg:text-5xl font-light text-slate-900 tracking-tighter leading-none italic">Product <span class="font-bold not-italic">Lookbook.</span></p>
         </div>
 
-        <div class="flex overflow-x-auto no-scrollbar gap-5 md:gap-8 px-6 md:px-[calc((100vw-1200px)/2+24px)] snap-x snap-mandatory pb-12 reveal reveal-right">
-            <!-- Items -->
-            <div class="snap-start shrink-0 w-[240px] md:w-[320px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 0ms;">
-                <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] md:rounded-[2rem] mb-4 md:mb-8 bg-slate-100 shadow-lg transition-all duration-700">
-                    <img src="https://plowexim.com/uploads/images/inW4sBroken%20Rice%20and.png?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Rice">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20">
+            <div class="flex overflow-x-auto no-scrollbar gap-5 lg:gap-8 snap-x snap-mandatory pb-8 reveal reveal-right">
+                <div class="snap-start shrink-0 w-[240px] lg:w-[260px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 0ms;">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] mb-4 bg-slate-100 shadow-lg transition-all duration-700">
+                        <img src="https://plowexim.com/uploads/images/inW4sBroken%20Rice%20and.png?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Rice">
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">Premium Speciality</p>
+                    <h3 class="text-lg font-medium tracking-tight text-slate-900">Broken Rice</h3>
                 </div>
-                <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">Premium Speciality</p>
-                <h3 class="text-lg md:text-xl font-medium tracking-tight text-slate-900">Broken Rice</h3>
-            </div>
-            <div class="snap-start shrink-0 w-[240px] md:w-[320px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 100ms;">
-                <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] md:rounded-[2rem] mb-4 md:mb-8 bg-slate-100 shadow-lg transition-all duration-700">
-                    <img src="https://as1.ftcdn.net/v2/jpg/06/77/01/34/1000_F_677013430_1jLnnjZuxQGfHIwPkZXzMYSxN2eb8Lel.jpg?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Maize">
+                <div class="snap-start shrink-0 w-[240px] lg:w-[260px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 100ms;">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] mb-4 bg-slate-100 shadow-lg transition-all duration-700">
+                        <img src="https://as1.ftcdn.net/v2/jpg/06/77/01/34/1000_F_677013430_1jLnnjZuxQGfHIwPkZXzMYSxN2eb8Lel.jpg?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Maize">
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">Feed Speciality</p>
+                    <h3 class="text-lg font-medium tracking-tight text-slate-900">Yellow Maize</h3>
                 </div>
-                <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">Feed Speciality</p>
-                <h3 class="text-lg md:text-xl font-medium tracking-tight text-slate-900">Yellow Maize</h3>
-            </div>
-            <div class="snap-start shrink-0 w-[240px] md:w-[320px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 200ms;">
-                <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] md:rounded-[2rem] mb-4 md:mb-8 bg-slate-100 shadow-lg transition-all duration-700">
-                    <img src="https://5.imimg.com/data5/IOS/Default/2024/5/420024360/HY/FH/CM/47161101/product-jpeg.png?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="DDGS">
+                <div class="snap-start shrink-0 w-[240px] lg:w-[260px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 200ms;">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] mb-4 bg-slate-100 shadow-lg transition-all duration-700">
+                        <img src="https://5.imimg.com/data5/IOS/Default/2024/5/420024360/HY/FH/CM/47161101/product-jpeg.png?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Soya">
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">High Protein Feed</p>
+                    <h3 class="text-lg font-medium tracking-tight text-slate-900">DDGS</h3>
                 </div>
-                <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">High Protein Feed</p>
-                <h3 class="text-lg md:text-xl font-medium tracking-tight text-slate-900">DDGS</h3>
-            </div>
-            <div class="snap-start shrink-0 w-[240px] md:w-[320px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 300ms;">
-                <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] md:rounded-[2rem] mb-4 md:mb-8 bg-slate-100 shadow-lg transition-all duration-700">
-                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1089&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Wheat">
+                <div class="snap-start shrink-0 w-[240px] lg:w-[260px] group cursor-pointer reveal reveal-up" onclick="triggerFloat(this)" style="transition-delay: 300ms;">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] mb-4 bg-slate-100 shadow-lg transition-all duration-700">
+                        <img src="https://images.pexels.com/photos/18328397/pexels-photo-18328397.jpeg?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" alt="Paddy">
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">Rice Mills</p>
+                    <h3 class="text-lg font-medium tracking-tight text-slate-900">Paddy</h3>
                 </div>
-                <p class="text-[9px] uppercase tracking-[0.2em] font-black text-emerald-800 mb-1">Flour Units</p>
-                <h3 class="text-lg md:text-xl font-medium tracking-tight text-slate-900">Wheat</h3>
             </div>
         </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-16 md:py-32 bg-slate-50 relative">
-        <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[1px] bg-transparent md:bg-slate-200 border-none md:border border-slate-200 rounded-lg overflow-hidden">
-            <div class="bg-white p-8 md:p-12 space-y-4 hover:bg-emerald-50 transition-colors border border-slate-100 md:border-none rounded-2xl md:rounded-none shadow-sm reveal reveal-zoom" style="transition-delay: 0ms;">
-                <div class="w-12 h-12 flex items-center justify-center bg-[#022c22] text-amber-500 rounded-xl mb-4">
-                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+    <section id="services" class="py-16 lg:py-24 bg-slate-50 relative lg:min-h-[70vh] flex items-center">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-transparent border lg:border-slate-200 lg:rounded-[1rem] overflow-hidden reveal shadow-sm">
+                <div class="bg-white p-8 lg:p-10 space-y-4 hover:bg-emerald-50 transition-colors border-b lg:border-b-0 lg:border-r border-slate-200 reveal reveal-zoom">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#022c22] text-amber-500 rounded-lg mb-4">
+                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold tracking-tight uppercase text-emerald-950">Market Brokerage</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed font-light">Precision matching for large-scale milling contracts with 30 years of data-driven market mastery.</p>
                 </div>
-                <h3 class="text-lg font-bold tracking-tight uppercase text-emerald-950">Market Brokerage</h3>
-                <p class="text-sm text-slate-500 leading-relaxed font-light">Precision matching for large-scale milling contracts with 30 years of data-driven market mastery.</p>
-                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-300"></i>
-            </div>
-            <div class="bg-white p-8 md:p-12 space-y-4 hover:bg-emerald-50 transition-colors border border-slate-100 md:border-none rounded-2xl md:rounded-none shadow-sm reveal reveal-zoom" style="transition-delay: 100ms;">
-                <div class="w-12 h-12 flex items-center justify-center bg-[#022c22] text-amber-500 rounded-xl mb-4">
-                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <div class="bg-white p-8 lg:p-10 space-y-4 hover:bg-emerald-50 transition-colors border-b lg:border-b-0 lg:border-r border-slate-200 reveal reveal-zoom">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#022c22] text-amber-500 rounded-lg mb-4">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold tracking-tight uppercase text-emerald-950">Trade Finance</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed font-light">Strategic capital solutions ensuring zero liquidity friction for massive commodity movement cycles.</p>
                 </div>
-                <h3 class="text-lg font-bold tracking-tight uppercase text-emerald-950">Trade Finance</h3>
-                <p class="text-sm text-slate-500 leading-relaxed font-light">Strategic capital solutions ensuring zero liquidity friction for massive commodity movement cycles.</p>
-                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-300"></i>
-            </div>
-            <div class="bg-white p-8 md:p-12 space-y-4 hover:bg-emerald-50 transition-colors border border-slate-100 md:border-none rounded-2xl md:rounded-none shadow-sm reveal reveal-zoom" style="transition-delay: 200ms;">
-                <div class="w-12 h-12 flex items-center justify-center bg-[#022c22] text-amber-500 rounded-xl mb-4">
-                    <i data-lucide="globe" class="w-5 h-5"></i>
+                <div class="bg-white p-8 lg:p-10 space-y-4 hover:bg-emerald-50 transition-colors border-none reveal reveal-zoom">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#022c22] text-amber-500 rounded-lg mb-4">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold tracking-tight uppercase text-emerald-950">Command & Flow</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed font-light">Managing the WB-Bihar trade corridor with military precision through strategic Siliguri & Purnea hubs.</p>
                 </div>
-                <h3 class="text-lg font-bold tracking-tight uppercase text-emerald-950">Command & Flow</h3>
-                <p class="text-sm text-slate-500 leading-relaxed font-light">Managing the WB-Bihar trade corridor with military precision through strategic Siliguri & Purnea hubs.</p>
-                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-300"></i>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT BLOCK -->
-    <section id="contact" class="py-16 md:py-32 bg-white">
-        <div class="max-w-[1200px] mx-auto px-6 relative">
+    <!-- CONTACT BLOCK (Explicit Laptop Side-by-Side View) -->
+    <section id="contact" class="py-16 lg:py-20 bg-white lg:min-h-screen flex items-center">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 relative w-full">
             
-            <div id="success-modal" class="absolute inset-0 z-[50] bg-[#022c22] rounded-[2rem] md:rounded-[3rem] flex flex-col items-center justify-center text-center p-8 md:p-12">
-                <i data-lucide="check-circle-2" class="w-16 h-16 md:w-20 md:h-20 text-amber-500 mb-6"></i>
+            <div id="success-modal" class="absolute inset-0 z-[50] bg-[#022c22] rounded-[2rem] lg:rounded-[3rem] flex flex-col items-center justify-center text-center p-8 lg:p-12">
+                <i data-lucide="check-circle-2" class="w-16 h-16 lg:w-20 md:h-20 text-amber-500 mb-6"></i>
                 <h3 class="text-2xl font-bold text-white mb-4">Trade Inquiry Sent</h3>
-                <p class="text-emerald-100/60 max-sm mb-8 font-light italic text-lg leading-relaxed">Requirement successfully formatted. You are being redirected to the WhatsApp trade desk.</p>
+                <p class="text-emerald-100/60 max-w-sm mb-8 font-light italic text-lg leading-relaxed">Requirement successfully formatted. You are being redirected to the WhatsApp trade desk.</p>
                 <button onclick="resetForm()" class="bg-white text-emerald-950 px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-amber-500 transition-all">New Inquiry</button>
             </div>
 
-            <div class="bg-[#022c22] bg-pattern rounded-[2rem] md:rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-3xl">
-                <!-- Info Side -->
-                <div class="lg:w-1/2 p-10 md:p-20 space-y-8 md:space-y-16 text-white border-b lg:border-b-0 lg:border-r border-emerald-800 reveal reveal-left">
-                    <div class="space-y-4">
-                        <h2 class="text-3xl md:text-5xl font-light tracking-tighter leading-none text-amber-500">Inquiry Desk.</h2>
+            <div class="bg-[#022c22] bg-pattern rounded-[2rem] lg:rounded-[1.5rem] overflow-hidden flex flex-col lg:flex-row shadow-3xl lg:min-h-[500px]">
+                <!-- Address Module (Left on Laptop) -->
+                <div class="w-full lg:w-1/2 p-10 lg:p-16 space-y-8 lg:space-y-12 text-white border-b lg:border-b-0 lg:border-r border-emerald-800 reveal reveal-left">
+                    <div class="space-y-2">
+                        <h2 class="text-3xl lg:text-[2.5rem] font-light tracking-tighter leading-none text-amber-500">Inquiry Desk.</h2>
                         <p class="text-emerald-100/50 font-light text-base md:text-lg">Direct access to the Eastern Indian trade command.</p>
                     </div>
-                    <div class="space-y-8 md:space-y-12">
+                    <div class="space-y-6 lg:space-y-8">
                         <div class="flex gap-6 items-start">
                             <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-emerald-900 flex items-center justify-center shrink-0 border border-emerald-700">
                                 <i data-lucide="map-pin" class="text-amber-500 w-4 h-4 md:w-5 md:h-5"></i>
@@ -378,7 +370,7 @@
                             <div class="space-y-1">
                                 <p class="text-[10px] uppercase tracking-widest font-black text-emerald-400">Head Office — Siliguri</p>
                                 <p class="text-xs md:text-sm font-medium opacity-70 leading-relaxed">Shree Maa Bhawan, 2nd Floor, Khalpara - 734005.</p>
-                                <a href="tel:+919434069447" class="block text-amber-500 font-bold text-lg md:text-2xl tracking-tight transition-transform hover:scale-105">+91 94340 69447</a>
+                                <a href="tel:+919434069447" class="block text-amber-500 font-bold text-lg lg:text-xl tracking-tight transition-transform hover:scale-105">+91 94340 69447</a>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
@@ -394,13 +386,13 @@
                     </div>
                 </div>
 
-                <!-- Form Side -->
-                <form id="inquiry-form" class="lg:w-1/2 p-10 md:p-20 bg-white/5 backdrop-blur-sm space-y-8 md:space-y-10 text-white reveal reveal-right">
+                <!-- Form Module (Right on Laptop) -->
+                <form id="inquiry-form" class="w-full lg:w-1/2 p-10 lg:p-16 bg-white/5 backdrop-blur-sm space-y-6 lg:space-y-10 text-white reveal reveal-right flex flex-col justify-center">
                     <h3 class="text-[10px] uppercase tracking-widest font-black text-emerald-400">WhatsApp Trade Desk</h3>
-                    <div class="grid gap-8 md:gap-10">
-                        <input required type="text" id="name" placeholder="Full Name" class="w-full bg-transparent border-b border-emerald-800 py-3 focus:outline-none focus:border-amber-500 font-light text-sm transition-all text-white placeholder:text-emerald-100/20">
-                        <input type="text" id="org" placeholder="Organization" class="w-full bg-transparent border-b border-emerald-800 py-3 focus:outline-none focus:border-amber-500 font-light text-sm transition-all text-white placeholder:text-emerald-100/20">
-                        <textarea required id="msg" placeholder="Quantity, Commodity & Delivery Location" rows="3" class="w-full bg-transparent border-b border-emerald-800 py-3 focus:outline-none focus:border-amber-500 font-light text-sm transition-all text-white placeholder:text-emerald-100/20"></textarea>
+                    <div class="grid gap-6 lg:gap-8">
+                        <input required type="text" id="name" placeholder="Full Name" class="w-full bg-transparent border-b border-emerald-800 py-2 focus:outline-none focus:border-amber-500 font-light text-sm transition-all text-white placeholder:text-emerald-100/20">
+                        <input type="text" id="org" placeholder="Organization" class="w-full bg-transparent border-b border-emerald-800 py-2 focus:outline-none focus:border-amber-500 font-light text-sm transition-all text-white placeholder:text-emerald-100/20">
+                        <textarea required id="msg" placeholder="Quantity, Commodity & Delivery Location" rows="2" class="w-full bg-transparent border-b border-emerald-800 py-2 focus:outline-none focus:border-amber-500 font-light text-sm transition-all text-white placeholder:text-emerald-100/20"></textarea>
                     </div>
                     <button type="submit" id="submit-btn" class="w-full bg-amber-500 text-emerald-950 btn-standard border-none rounded-xl font-black text-[11px] shadow-2xl shadow-amber-500/10 hover:bg-white">Submit Trade Inquiry</button>
                 </form>
@@ -409,19 +401,18 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 md:py-24 bg-white border-t border-slate-50">
-        <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left reveal reveal-zoom">
-            <div class="flex items-center gap-4 opacity-40">
-                <!-- Circular Logo Container -->
+    <footer class="py-12 lg:py-16 bg-white border-t border-slate-50">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-6 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left reveal reveal-zoom">
+            <div class="flex items-center gap-4">
                 <div class="w-10 h-10 flex items-center justify-center bg-black rounded-full overflow-hidden shadow-sm">
-                    <img src="GC.png" alt="GC" class="w-full h-full object-cover">
+                    <img src="gc.png" alt="GC" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col text-left">
-                    <span class="text-[10px] font-black tracking-[0.2em] text-slate-900 uppercase leading-none">GANGA CONVESSORS</span>
-                    <span class="text-[8px] font-bold text-slate-400 uppercase tracking-widest mt-1">Institutional Brokerage Since 1990</span>
+                    <span class="text-[10px] font-black tracking-[0.2em] text-slate-800 uppercase leading-none">GANGA CONVESSORS</span>
+                    <span class="text-[8px] font-bold text-slate-700 uppercase tracking-widest mt-1">Institutional Brokerage Since 1990</span>
                 </div>
             </div>
-            <div class="flex gap-12 text-[9px] uppercase tracking-[0.4em] font-black text-slate-300">
+            <div class="flex gap-12 text-[9px] uppercase tracking-[0.4em] font-black text-slate-700">
                 <p>© 2026 Ganga Convessors</p>
                 <p>Siliguri • Gulabbagh</p>
             </div>
@@ -430,8 +421,8 @@
 
     <!-- MOBILE CTA -->
     <div class="md:hidden fixed bottom-6 left-6 right-6 z-[300] flex gap-3">
-        <a href="tel:+919434069447" class="flex-1 bg-white border-2 border-[#022c22] text-[#022c22] h-[52px] rounded-full flex items-center justify-center gap-2 font-bold text-[10px] uppercase tracking-[0.1em] shadow-2xl">Call</a>
-        <a href="https://wa.me/919434069447" class="flex-1 bg-[#022c22] text-white h-[52px] rounded-full flex items-center justify-center gap-2 font-black text-[10px] uppercase tracking-[0.1em] shadow-2xl">WhatsApp</a>
+        <a href="tel:+919434069447" class="flex-1 bg-white border-2 border-[#022c22] text-[#022c22] h-[52px] rounded-full flex items-center justify-center gap-2 font-bold text-[10px] uppercase tracking-[0.1em] shadow-2xl">Call Office</a>
+        <a href="https://wa.me/919434069447" class="flex-1 bg-[#022c22] text-white h-[52px] rounded-full flex items-center justify-center gap-2 font-bold text-[10px] uppercase tracking-[0.1em] shadow-2xl">WhatsApp</a>
     </div>
 
     <script>
@@ -455,7 +446,6 @@
             }
         };
 
-        // ENHANCED OBSERVER LOGIC
         const observerOptions = {
             threshold: 0.15,
             rootMargin: '0px 0px -50px 0px'
